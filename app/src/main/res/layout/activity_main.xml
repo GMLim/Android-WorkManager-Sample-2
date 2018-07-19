@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btRunOneTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="작업 실행 및 확인"/>
+
+    <Button
+        android:id="@+id/btRunChaningWork"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btRunOneTime"
+        android:text="연결된 작업 의 정보 전달"/>
+
+    <Button
+        android:id="@+id/btRunChaningWork2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btRunChaningWork"
+        android:text="세개의 연결된 작업 의 정보 전달"/>
+
+    <Button
+        android:id="@+id/btRunCancelWork"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btRunChaningWork2"
+        android:text="10초간 로그 출력 작업 실행"/>
+
+    <Button
+        android:id="@+id/btCancelWorkUseId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btRunCancelWork"
+        android:text="UUID 를 이용한 작업 취소"/>
+
+    <Button
+        android:id="@+id/btCancelWorkUseTag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btCancelWorkUseId"
+        android:text="Tag 를 이용한 작업 취소"/>
+
+    <Button
+        android:id="@+id/btRunUniqueWorkUseKEEP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btCancelWorkUseTag"
+        android:text="Unique Work - KEEP"/>
+
+    <Button
+        android:id="@+id/btRunUniqueWorkUseREPLACE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btRunUniqueWorkUseKEEP"
+        android:text="Unique Work - REPLACE"/>
+
+    <Button
+        android:id="@+id/btRunUniqueWorkUseAPPEND"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btRunUniqueWorkUseREPLACE"
+        android:text="Unique Work - APPEND"/>
+
+</android.support.constraint.ConstraintLayout>
